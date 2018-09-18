@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule }    from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -19,7 +21,19 @@ import { RahioneroomComponent } from './rahioneroom/rahioneroom.component';
 import { RahioneamenitiesComponent } from './rahioneamenities/rahioneamenities.component';
 import { RahionegalleryComponent } from './rahionegallery/rahionegallery.component';
 import { RahionecontactComponent } from './rahionecontact/rahionecontact.component';
-
+import { LoginComponent } from './login/login.component';
+import { RahitwoComponent } from './rahitwo/rahitwo.component';
+import { RahitwoaboutComponent } from './rahitwoabout/rahitwoabout.component';
+import { RahitwoamenitiesComponent } from './rahitwoamenities/rahitwoamenities.component';
+import { RahitwocontactComponent } from './rahitwocontact/rahitwocontact.component';
+import { RahitwogalleryComponent } from './rahitwogallery/rahitwogallery.component';
+import { SiderahitwoComponent } from './siderahitwo/siderahitwo.component';
+import { BackendserviceService } from './backendservice.service';
+import { AdminComponent } from './admin/admin.component';
+import { CKEditorModule } from 'ngx-ckeditor';
+import { AdminsidemenuComponent } from './adminsidemenu/adminsidemenu.component';
+import { ImageuploadComponent } from './imageupload/imageupload.component';
+import {AtomSpinnerModule} from 'angular-epic-spinners'
 
 
 @NgModule({
@@ -40,13 +54,31 @@ import { RahionecontactComponent } from './rahionecontact/rahionecontact.compone
     RahioneroomComponent,
     RahioneamenitiesComponent,
     RahionegalleryComponent,
-    RahionecontactComponent
+    RahionecontactComponent,
+    LoginComponent,
+    RahitwoComponent,
+    RahitwoaboutComponent,
+    RahitwoamenitiesComponent,
+    RahitwocontactComponent,
+    RahitwogalleryComponent,
+    SiderahitwoComponent,
+    AdminComponent,
+    AdminsidemenuComponent,
+    ImageuploadComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpModule,
+    FormsModule,
+    CKEditorModule,
+    AtomSpinnerModule
+    
   ],
-  providers: [],
+  providers: [BackendserviceService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  display = false;
+}

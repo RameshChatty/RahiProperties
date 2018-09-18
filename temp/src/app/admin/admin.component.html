@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Rahi</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="../../assets/rahi/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/rahi/css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			
+			<div class="row" style="border: 1px">
+				<div class="col-md-3">
+					<app-adminsidemenu></app-adminsidemenu>
+				</div>
+				<div class="col-md-9" >
+					
+          <router-outlet></router-outlet>
+          <router-outlet name="/admin"></router-outlet>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <script src="../../assets/rahi/js/jquery.min.js"></script>
+    <script src="../../assets/rahi/js/bootstrap.min.js"></script>
+    <script src="../../assets/rahi/js/scripts.js"></script>
+  </body>
+</html>

@@ -12,4 +12,9 @@ export class SiderahioneComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClickMe(){
+console.log("dsjdjsdjsdhsjd");
+
+  }
+
 }

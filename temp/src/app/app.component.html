@@ -3,29 +3,39 @@
 
 </head>
 <body >
-    <div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
-        <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+     <div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+        <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;color: bisque"></div>
         <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
         <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
         <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
-    </div>
+      </div>
+    <div *ngIf = "display">
+            <app-atom-spinner
+              [animationDuration]="1000"
+              [size]="60"
+              [color]="'#ff1d5e'">
+            </app-atom-spinner>
+          </div>
+          <div class="wrapper">
       <app-header></app-header>
-      <div id="wrapper">
+      
    
-    <div class="container" background="../src/assets/images/bgimage.jpg">
+    <div  background="../src/assets/images/bgimage.jpg">
           
         <router-outlet></router-outlet>
           
       </div>
-      </div>
+   
 
       <app-footer></app-footer>
-  
-
-
-
-</body>
+    </div>
+  </body>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!-- Optional theme -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
 </html>

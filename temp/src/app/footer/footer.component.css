@@ -1,10 +1,10 @@
 
 .context-dark, .bg-gray-dark, .bg-primary {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(245, 255, 255,0.4);
 }
 
 .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
-    color: #ffffff;
+    color: #070606;
 }
 .nav-list li {
     padding-top: 5px;

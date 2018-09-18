@@ -1,3 +1,7 @@
-<p>
-  rahionegallery works!
-</p>
+<div class="gallery" *ngFor="let img of displayList">
+  <a target="_blank">
+    <img [src]="'data:image/jpg;base64,'+img.image" alt="img.description" width="300" height="400">
+
+  </a>
+  <div class="desc">{{img.description}}</div>
+</div>

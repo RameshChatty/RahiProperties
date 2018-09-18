@@ -1,4 +1,16 @@
 <h1>
   About page
 </h1>
-<img src="../../assets/images/UnderConstruction.jpg" />
+<form #aboutForm="ngForm" novalidate>
+<div>
+  <span> Rahi-I :<input type="radio" name="about" value="1" [(ngModel)]="aboutModel.property" />  </span>
+ {{about}} <span>Rahi-II :<input type="radio" name="about" value="2" [(ngModel)]="aboutModel.property" />    </span>
+</div>
+<div>
+  <ck-editor name="editor1" [(ngModel)]="aboutModel.aboutText" skin="moono-lisa" language="en" [fullPage]="true"></ck-editor>
+  </div>
+
+  <div>
+    <input type="button" value="Submit" (click)="save()" />
+  </div>
+</form>

@@ -1,0 +1,23 @@
+.heading1{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-style: italic;
+padding: 15px;
+color: #7e0080
+
+}
+
+.section{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 13px;
+    padding: 15px;
+color: #7e0080
+}
+
+
+.backgroundimage {
+    background-image: url("../../assets/images/banner-images/slide2.jpg");
+    background-color: #ffff;
+    background-size: 100% 100%;
+    
+}

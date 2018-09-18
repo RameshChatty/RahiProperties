@@ -1,0 +1,51 @@
+<div class="container">
+
+ <h1> Upload Image</h1>
+
+<div>
+<table width="100%" border="1px">
+<thead>
+  <tr>
+    <th colspan="2"> Images Upload form <span style="color: red;">(Please upload images only)</span></th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td> select the Property type </td>
+  <td> Rahi-I <input type="radio"   id="propertyType"   name="propertyType"     [value]="1"  [(ngModel)]="propertyType"  (ngModelChange)="choose($event)" /> &nbsp;&nbsp;&nbsp;&nbsp;
+    Rahi-II <input type="radio"   id="propertyType"   name="propertyType"     [value]="2"  [(ngModel)]="propertyType"  (ngModelChange)="choose($event)" />
+  </td>
+  
+</tr>
+<tr>
+  <td>    Description  </td>
+  <td> <textarea type="desc" id="desc" name="desc" maxlength="25" placeholder="Enter up to 25 chars" [(ngModel)]="desc" ></textarea> </td>
+</tr>
+<tr>
+  <td>Upload the image file </td>
+  <td>
+    <input type="file" [(ngModel)]="uploadimage" name="uploadimage" (change)="onSelectedFile($event)" accept=".jpg,.jpeg,.png" />
+  </td>
+</tr>
+<tr>
+  <td colspan="2" style="text-align: right">
+    <button value="upload" class="  btn.success" (click)="onuploadfile()"> upload</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;
+    <button value="loadImages" class="btn.success" (click)="displayimages()">  show </button>
+  </td>
+</tr>
+
+</tbody>
+
+  </table> 
+
+</div>
+
+
+<div class="gallery" *ngFor="let img of displayList">
+  <a target="_blank" >
+    <img [src]="'data:image/jpg;base64,'+img.image"  alt="img.description" width="300" height="400">
+    
+  </a>
+  <div class="desc">{{img.description}}</div>
+</div>
+</div>
