@@ -1,0 +1,15 @@
+.hotel-amenities{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    color: black;
+    font-weight: 200;
+    padding: 5px;
+}
+
+.row{
+    padding: 14px;
+}
+
+.column{
+    padding: 45px;
+}
