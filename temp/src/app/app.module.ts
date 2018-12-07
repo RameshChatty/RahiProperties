@@ -33,9 +33,14 @@ import { AdminComponent } from './admin/admin.component';
 import { CKEditorModule } from 'ngx-ckeditor';
 import { AdminsidemenuComponent } from './adminsidemenu/adminsidemenu.component';
 import { ImageuploadComponent } from './imageupload/imageupload.component';
-import {AtomSpinnerModule} from 'angular-epic-spinners'
-
-
+import {AtomSpinnerModule} from 'angular-epic-spinners';
+import { QueryreplayComponent } from './queryreplay/queryreplay.component';
+import { RoomratesComponent } from './roomrates/roomrates.component';
+import { AmenetiesComponent } from './ameneties/ameneties.component';
+import { AdmincontactComponent } from './admincontact/admincontact.component';
+import { SpinnerComponent } from './spinner/spinner.component'
+import { ModeloneService } from './modelone.service';
+import { ModeloneComponent } from './modelone/modelone.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +69,13 @@ import {AtomSpinnerModule} from 'angular-epic-spinners'
     SiderahitwoComponent,
     AdminComponent,
     AdminsidemenuComponent,
-    ImageuploadComponent
+    ImageuploadComponent,
+    QueryreplayComponent,
+    RoomratesComponent,
+    AmenetiesComponent,
+    AdmincontactComponent,
+    SpinnerComponent  ,
+    ModeloneComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +87,7 @@ import {AtomSpinnerModule} from 'angular-epic-spinners'
     AtomSpinnerModule
     
   ],
-  providers: [BackendserviceService],
+  providers: [BackendserviceService,ModeloneService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

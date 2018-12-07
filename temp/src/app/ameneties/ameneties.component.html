@@ -1,0 +1,32 @@
+<h1>
+    Amenities
+  </h1>
+  <form #aboutForm="ngForm" novalidate>
+  
+  <table border="1">
+  <tr>
+    <th colspan="2">
+      About form
+    </th>
+  </tr>
+  <tr>
+    <td>Property type</td>
+    <td>
+         Rahi-I :<input type="radio" name="about" value="1" [(ngModel)]="aboutModel.property" (change)="display(3,1)" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         Rahi-II :<input type="radio" name="about" value="2" [(ngModel)]="aboutModel.property" (change)="display(3,2)"/>  
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2">
+        <ck-editor name="editor1" [(ngModel)]="aboutModel.aboutText" skin="moono-lisa" language="en" [fullPage]="true"></ck-editor>
+    </th>
+  </tr>
+  <tr>
+    <th colspan="2">
+        <input type="button" value="Submit" (click)="save(3)" />
+    </th>
+  </tr>
+  
+  </table>
+  
+  </form>

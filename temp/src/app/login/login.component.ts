@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   username : string; 
   password : string;
-
+  title = '';
   constructor(private http : HttpClient, private router : Router) {
     
    }
@@ -20,9 +20,13 @@ export class LoginComponent implements OnInit {
    getauthentication(){
     
      console.log("---------------------");
+     console.log(this.title+"-------")
+     this.title='temp';
      return this.http.get<any>("http://localhost:2020/rahiproperties/login?username="+this.username+"&password="+this.password).
      subscribe(d=>{
+      console.log(this.title+"----2---")
       this.router.navigate(['admin']);
+      this.title='';
      })
    }
   ngOnInit() {

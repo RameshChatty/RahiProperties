@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -23,11 +23,16 @@ import { RahitwogalleryComponent } from './rahitwogallery/rahitwogallery.compone
 import { RahitwocontactComponent } from './rahitwocontact/rahitwocontact.component';
 import { AdminComponent } from './admin/admin.component';
 import { ImageuploadComponent } from './imageupload/imageupload.component';
+import { QueryreplayComponent } from './queryreplay/queryreplay.component';
+import { RoomratesComponent } from './roomrates/roomrates.component';
+import { AmenetiesComponent } from './ameneties/ameneties.component';
+import { AdmincontactComponent } from './admincontact/admincontact.component';
 
 const routes: Routes = [
   { path: 'query', component: QueryComponent },
   { path: 'reservation', component: ReservationComponent },
   { path: 'images', component: ImageuploadComponent },
+  
   { path: 'rooms', component: RoomsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
@@ -53,7 +58,11 @@ const routes: Routes = [
   ]},  
   { path : 'admin' , component :  AdminComponent , children :[
     {path : 'about' , component :  AboutComponent },
-    { path: 'images', component: ImageuploadComponent }
+    { path: 'images', component: ImageuploadComponent },
+    {path : 'roomerates', component : RoomratesComponent},
+    {path : 'amenities', component : AmenetiesComponent },
+    {path : 'admincontact', component : AdmincontactComponent },
+    {path : 'queryreplay',component : QueryreplayComponent}
   ] },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   

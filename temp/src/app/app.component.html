@@ -9,19 +9,23 @@
         <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
         <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
       </div>
-    <div *ngIf = "display">
-            <app-atom-spinner
-              [animationDuration]="1000"
-              [size]="60"
-              [color]="'#ff1d5e'">
-            </app-atom-spinner>
-          </div>
+    
+
+          
           <div class="wrapper">
       <app-header></app-header>
       
    
     <div  background="../src/assets/images/bgimage.jpg">
+      <div *ngIf = "title">
+          <app-atom-spinner
+            [animationDuration]="1000"
+            [size]="60"
+            [color]="'#ff1d5e'">
+          </app-atom-spinner>
           
+        </div>
+        
         <router-outlet></router-outlet>
           
       </div>

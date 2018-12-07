@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-
+import { BackendserviceService } from '../backendservice.service';
 @Component({
   selector: 'app-rahitwoabout',
   templateUrl: './rahitwoabout.component.html',
@@ -8,11 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RahitwoaboutComponent implements OnInit {
 
-  constructor() { }
-  
+  constructor(private  _backendservice : BackendserviceService) { }
+  data : any ;
   ngOnInit() {
+   
+    this.getaboutRahiOne();
   }
-
+  getaboutRahiOne() : void{
+    this._backendservice.getRahiAbout(1,2).subscribe( res =>
+      this.data=res 
+      
+     );;
+  } 
 
   
 }

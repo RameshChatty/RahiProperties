@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Query} from '../query';
 import { BackendserviceService } from '../backendservice.service';
+import { Router } from '../../../node_modules/@angular/router';
 @Component({
   selector: 'app-query',
   templateUrl: './query.component.html',
@@ -8,16 +9,20 @@ import { BackendserviceService } from '../backendservice.service';
 })
 export class QueryComponent implements OnInit {
 
-   queryModel=new Query("hello","45454@gm.com ","12415 ","54545454");
+   queryModel=new Query("","","","");
     
-  constructor(private _backendservice :BackendserviceService) { }
+  constructor(private _backendservice :BackendserviceService, private router : Router) { }
 
   ngOnInit() {
   }
 
   onsubmit(){
     this._backendservice.saveQuery(this.queryModel)
-    .subscribe( data => console.log("recieved",data));
+    .subscribe( data =>{
+      console.log("recieved",data)
+      this.router.navigate(['home']);
+    });
+    
   }
  
 }

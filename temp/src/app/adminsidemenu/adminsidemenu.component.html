@@ -1,21 +1,24 @@
 <ul class="nav flex-column" >
   <li class="nav-item">
-    <a class="nav-link active" routerLink="/admin/dashboard" >Home</a>
+    <a class="nav-link active" routerLink="/admin/dashboard" [ngClass]="{ 'active':activeTab==='dashboard'}" (click)="search('dashboard')" >Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" routerLink="/admin/about">About</a>
+    <a class="nav-link" routerLink="/admin/about" [ngClass]="{ 'active':activeTab==='about'}" (click)="search('about')"  >About</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" routerLink="/admin/roomerates">Room rates</a>
+    <a class="nav-link" routerLink="/admin/roomerates" [ngClass]="{ 'active':activeTab==='roomerates'}" (click)="search('roomerates')" >Room rates</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" routerLink="/admin/amenities">Room amanities</a>
+    <a class="nav-link" routerLink="/admin/amenities" [ngClass]="{ 'active':activeTab==='amenities'}" (click)="search('amenities')" >Room amanities</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" routerLink="/admin/gallery">Images</a>
+    <a class="nav-link" routerLink="/admin/images" [ngClass]="{ 'active':activeTab==='images'}" (click)="search('images')" >Images</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" routerLink="/admin/contact">Contact information</a>
+    <a class="nav-link" routerLink="/admin/admincontact" [ngClass]="{ 'active':activeTab==='admincontact'}" (click)="search('admincontact')" >Contact information</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin/queryreplay">Query Reply</a>
   </li>
 
 </ul>

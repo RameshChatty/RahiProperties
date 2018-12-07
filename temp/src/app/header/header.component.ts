@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
-
+  activeTab='home';
   ngOnInit() {
   }
-
+  search(activeTab){
+    this.activeTab = activeTab;
+  }
 }

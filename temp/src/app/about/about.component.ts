@@ -8,10 +8,11 @@ import { BackendserviceService } from '../backendservice.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-   aboutModel=new About("1","");
+   aboutModel=new About("1","1","");
   constructor(private _backendservice: BackendserviceService) { }
   about :Number = 1;
   ngOnInit() {
+    this.display(1,1);
   }
   
   submitAbout() {
@@ -24,5 +25,12 @@ export class AboutComponent implements OnInit {
   save(event){
     this._backendservice.saveAboutInformation(this.aboutModel)
     .subscribe( data => console.log("recieved",data));
+  }
+
+  display(oid,pid){
+    this._backendservice.getRahiAbout(oid,pid).subscribe( res =>
+      this.aboutModel.aboutText=res.htmlContent 
+      
+     );;
   }
 }

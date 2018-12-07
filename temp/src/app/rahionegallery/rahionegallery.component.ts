@@ -14,12 +14,16 @@ export class RahionegalleryComponent implements OnInit {
 
   constructor(private _backendservice :BackendserviceService) { }
   displayList : any;
+  display =false;
   ngOnInit() {
+    this.display=true;
     this.displayimages();
   }
   displayimages() : any{
     this._backendservice.getImages()
-    .subscribe(res=>this.displayList=res );
+    .subscribe(res=> {this.displayList=res;
+      this.display=false;
+    } );
     
     }
 }

@@ -8,12 +8,15 @@ import { BackendserviceService } from '../backendservice.service';
 export class RahioneaboutComponent implements OnInit {
 
   constructor(private  _backendservice : BackendserviceService) { }
-  data : {} ;
+  data : any ;
   ngOnInit() {
    
-    this.getCatsToDisplay();
+    this.getaboutRahiOne();
   }
-  getCatsToDisplay() : void{
-    console.log("dfkjfkdfdshfjh");
+  getaboutRahiOne() : void{
+   this._backendservice.getRahiAbout(1,1).subscribe( res =>
+      this.data=res 
+      
+     );; 
   } 
 }

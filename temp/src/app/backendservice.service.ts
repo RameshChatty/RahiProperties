@@ -40,4 +40,16 @@ export class BackendserviceService {
   getImages(){
     return this._http.get<any>(this.url +"display");
   }
+
+  loadquerydata() {
+    return this._http.get<any>(this.url +"loadquerydata");
+  }
+
+  getRahiAbout(oid,pid){
+    return this._http.get<any>(this.url +"getrahiabout?oid="+oid+"&pid="+pid);
+  }
+
+  sendMail(maildata){
+    return this._http.post<any>(this.url +"sendmail",maildata);
+  }
 }

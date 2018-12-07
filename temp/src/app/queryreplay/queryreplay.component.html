@@ -1,0 +1,62 @@
+<div class="container " *ngIf="tabledata">
+<br/>
+<br/>
+
+  <table width="75%"  border="1">
+    <thead>
+      <tr>
+        <th colspan="5" style="text-align: center"> Query report</th>
+      </tr>
+      <tr>
+        <th>S.No</th>
+        <th>Email </th>
+        <th>Telephone No</th>
+        <th>Query description</th>
+        <th>Replay</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of querydata;let i= index">
+        <td>{{i+1}}</td>
+        <td>{{x.username}}</td>
+        <td>{{x.contactnum}}</td>
+        <td>{{x.emailid}}  </td>
+        <td> <button  value="repost" (click)="replayQuery(x)"> Replay</button> </td>
+      </tr>
+    </tbody>
+
+  </table>
+  
+</div>
+
+<div class="container " *ngIf="mailEditor">
+  <br/><br/><br/>
+  <table border="1">
+    <thead>
+    <tr>
+      <th colspan="2"> Mail Replay</th>
+    </tr>
+  </thead>
+  <tr>
+    <th>Name</th>
+    <td><input type="text" [(ngModel)]="maildata.username" name="username" readonly="true" /> </td>
+  </tr>
+    <tr>
+      <th>To Address</th>
+      <td><input type="text" [(ngModel)]="maildata.toaddress" name="toaddress" readonly="true" /> </td>
+    </tr>
+    <tr>
+        <th>Subject</th>
+        <td><input type="text" [(ngModel)]="maildata.subject" name="maildata.subject" /> </td>
+      </tr>
+      <tr>
+          
+          <td colspan="2"> <ck-editor name="maildata.bodymsg" [(ngModel)]="maildata.bodymsg" skin="moono-lisa" language="en" [fullPage]="true"></ck-editor> </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button (click)="postmail()"> send </button>
+          </td>
+        </tr>
+  </table>
+</div>

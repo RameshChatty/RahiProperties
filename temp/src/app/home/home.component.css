@@ -16,8 +16,33 @@ color: #7e0080
 
 
 .backgroundimage {
-    background-image: url("../../assets/images/banner-images/slide2.jpg");
+    background-image: url("../../assets/images/banner-images/slide1.jpg");
     background-color: #ffff;
     background-size: 100% 100%;
     
+}
+
+.section[_ngcontent-c4] {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 13px;
+    padding: 15px;
+    color: #ffffff;
+        height: 450px;
+}
+
+.section[_ngcontent-c10] {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 13px;
+    padding: 15px;
+    color: #81efd5fc;
+}
+
+div.section[_ngcontent-c10] {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 13px;
+    padding: 15px;
+    color: #81efd5fc;
 }

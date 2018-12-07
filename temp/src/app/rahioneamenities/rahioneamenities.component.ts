@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BackendserviceService } from '../backendservice.service';
 
 @Component({
   selector: 'app-rahioneamenities',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RahioneamenitiesComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private  _backendservice : BackendserviceService) { }
+  data : any ;
   ngOnInit() {
+   
+    this.getaboutRahiOne();
   }
-
+  getaboutRahiOne() : void{
+   this._backendservice.getRahiAbout(3,1).subscribe( res =>
+      this.data=res 
+      
+     );; 
+  } 
 }

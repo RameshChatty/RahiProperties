@@ -1,11 +1,13 @@
-<div class="container-fluid">
+<div class="container wpforms-container wpforms-container-full" id="wpforms-14" style="border: 1">
+
   <div class="container  md-5">
     <h1>Query form</h1>
-    {{queryForm.value | json}}
+    
 
 
   </div>
-    <form #queryForm="ngForm" (submit)="onsubmit()" novalidate>
+  <div class="wpforms-container-full wpforms-14">
+    <form #queryForm="ngForm" class="wpforms-form " (submit)="onsubmit()" novalidate>
       <div class="form-group">
         <label>Name</label>
         <input type="text" class="form-control" name="username" [(ngModel)]="queryModel.username">
@@ -35,5 +37,8 @@
             
 
     </form>
-
+    <br/>
+    <br/>
+    <br/>
+  </div>
 </div>

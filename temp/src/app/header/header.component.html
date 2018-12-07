@@ -1,11 +1,12 @@
 <div class="header">
     <a routerLink="/home" class="logo">Rahi Properties</a>
     <div class="header-right" style="margin-right: 10px;">
-      <a class="active" routerLink="/home">Home</a>
-      <a routerLink="/rahione">Rahi Properties -I</a>
-      <a routerLink="/rahitwo">Rahi Properties -II</a>
-      <a routerLink="/contact">Contact</a>
-      <a routerLink="/about">About</a>
-      <a routerLink="/query">Query</a>
+      <a class="active" routerLink="/home" [ngClass]="{ 'active':activeTab==='home'}" (click)="search('home')">Home</a>
+      <a routerLink="/rahione" [ngClass]="{ 'active':activeTab==='rahione'}" (click)="search('rahione')">Rahi Properties -I</a>
+      <a routerLink="/rahitwo" [ngClass]="{ 'active':activeTab==='rahitwo'}" (click)="search('rahitwo')">Rahi Properties -II</a>
+      <a routerLink="/contact" [ngClass]="{ 'active':activeTab==='contact'}" (click)="search('contact')">Contact</a>
+      
+      <a routerLink="/query" [ngClass]="{ 'active':activeTab==='query'}" (click)="search('query')">Query</a>
+      <a routerLink="/login" [ngClass]="{ 'active':activeTab==='login'}" (click)="search('login')">login</a>
     </div>
   </div>
