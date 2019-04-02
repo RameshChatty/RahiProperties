@@ -40,7 +40,10 @@ import { AmenetiesComponent } from './ameneties/ameneties.component';
 import { AdmincontactComponent } from './admincontact/admincontact.component';
 import { SpinnerComponent } from './spinner/spinner.component'
 import { ModeloneService } from './modelone.service';
-import { ModeloneComponent } from './modelone/modelone.component'
+import { ModeloneComponent } from './modelone/modelone.component';
+import { FileuploadComponent } from './fileupload/fileupload.component';
+import { FileUploadModule } from 'ng2-file-upload';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +78,8 @@ import { ModeloneComponent } from './modelone/modelone.component'
     AmenetiesComponent,
     AdmincontactComponent,
     SpinnerComponent  ,
-    ModeloneComponent
+    ModeloneComponent,
+    FileuploadComponent
   ],
   imports: [
     BrowserModule,
@@ -84,7 +88,8 @@ import { ModeloneComponent } from './modelone/modelone.component'
     HttpModule,
     FormsModule,
     CKEditorModule,
-    AtomSpinnerModule
+    AtomSpinnerModule,
+    FileUploadModule
     
   ],
   providers: [BackendserviceService,ModeloneService],

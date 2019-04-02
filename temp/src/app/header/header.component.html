@@ -1,5 +1,6 @@
 <div class="header">
     <a routerLink="/home" class="logo">Rahi Properties</a>
+    
     <div class="header-right" style="margin-right: 10px;">
       <a class="active" routerLink="/home" [ngClass]="{ 'active':activeTab==='home'}" (click)="search('home')">Home</a>
       <a routerLink="/rahione" [ngClass]="{ 'active':activeTab==='rahione'}" (click)="search('rahione')">Rahi Properties -I</a>
