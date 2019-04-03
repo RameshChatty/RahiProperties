@@ -16,7 +16,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class BackendserviceService {
-  url ="http://localhost:2020/rahiproperties/";
+  //url ="http://localhost:2020/rahiproperties/";
+  url="https://rahi-services.herokuapp.com/rahiproperties/";
   constructor(private _http: HttpClient) { } 
 
   saveQuery(_query:Query){
